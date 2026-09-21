@@ -38,7 +38,7 @@ function renderCards(timeframe) {
         <div class="c-card__content">
           <div class="c-card__header">
             <h2 class="c-card__title">${escapeHTML(card.title)}</h2>
-            <button class="c-card__menu-btn" aria-label="Options">...</button>
+            <button type="button" class="c-card__menu-btn" aria-label="Options">...</button>
           </div>
           <div class="c-card__body">
             <span class="c-card__hours">${currentHours}hrs</span>

@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
+
 <body>
   <main>
-    <header class="c-profile">
+    <section class="c-profile">
       <div class="c-profile__start">
         <div class="c-profile__picture">
-          <img src="images/image-jeremy.png" class="c-profile__image">
+          <img src="images/image-jeremy.png" alt="Jeremy Robson" class="c-profile__image">
         </div>
         <div class="c-profile__info">
-          <span>Report for</span>
-          <h2 class="c-profile__title">Jeremy Robson</h2>
+          <span class="c-profile__subtitle">Report for</span>
+          <h1 class="c-profile__title">Jeremy Robson</h1>
         </div>
       </div>
       <div class="c-profile__end">
-        <nav class="c-navigation">
+        <nav class="c-navigation" aria-label="Timeframe selection">
           <button class="c-navigation__button" data-timeframe="daily">Daily</button>
           <button class="c-navigation__button active" data-timeframe="weekly">Weekly</button>
           <button class="c-navigation__button" data-timeframe="monthly">Monthly</button>
         </nav>
       </div>
-    </header>
+    </section>
 
-    <div id="dashboard-grid" class="o-grid">
-
+    <div id="dashboard-grid" class="o-grid" aria-live="polite">
+      <div class="c-loading">Daten werden geladen...</div>
     </div>
+
+    <noscript>
+      <div class="c-alert">Bitte aktivieren Sie JavaScript, um das Dashboard zu nutzen.</div>
+    </noscript>
   </main>
-  
-  
+
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">xluxeo</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/xluxeo">xluxeo</a>.
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

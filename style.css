@@ -1,0 +1,68 @@
+:root {
+    --purple-600: hsl(246, 80%, 60%);
+    --orange-300:  hsl(15, 100%, 70%);
+    --blue-300:  hsl(195, 74%, 62%);
+    --pink-400: hsl(348, 100%, 68%);
+    --green-400: hsl(145, 58%, 55%);
+    --purple-700:  hsl(264, 64%, 52%);
+    --yellow-300: hsl(43, 84%, 65%);
+    --navy-950: hsl(226, 43%, 10%);
+    --navy-900: hsl(235, 46%, 20%);
+    --purple-500:  hsl(235, 45%, 61%);
+    --navy-200:  hsl(236, 100%, 87%);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/font/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 2.5rem 1.5rem;
+    font-family: 'Rubik';
+    font-size: 1.125rem;
+    background-color: var(--navy-950);
+    color: white;
+}
+
+.c-profile {
+    background-color: var(--navy-900);
+    border-radius: 0.8rem;
+}
+
+.c-profile__start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.8rem;
+    padding-block: 1.5rem;
+    background-color: var(--purple-600);
+    font-weight: 300;
+}
+
+.c-profile__picture {
+    inline-size: 3.5rem;
+}
+
+.c-profile__image {
+    display: block;
+    inline-size: 100%;
+    border-radius: 2rem;
+    border: 2px solid white
+}
+
+.c-profile__title {
+    font-size: 1.5rem;
+    font-weight: 300;
+}

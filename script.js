@@ -23,7 +23,7 @@ function escapeHTML(str) {
 
 function renderCards(timeframe) {
   const grid = document.getElementById("dashboard-grid");
-  
+
   let htmlContent = "";
   const previousLabels = { daily: "Yesterday", weekly: "Last Week", monthly: "Last Month" };
 
@@ -33,7 +33,7 @@ function renderCards(timeframe) {
     const previousHours = escapeHTML(String(card.timeframes[timeframe].previous));
     const label = previousLabels[timeframe];
 
-     htmlContent += `
+    htmlContent += `
       <article class="c-card" data-card-variant="${cardVariant}">
         <div class="c-card__content">
           <div class="c-card__header">
@@ -51,3 +51,17 @@ function renderCards(timeframe) {
 
   grid.innerHTML = htmlContent;
 }
+
+function setupNavigation() {
+  const navButtons = document.querySelectorAll(".c-navigation__button");
+
+  navButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      navButtons.forEach((btn) => btn.classList.remove("active"));
+      event.target.classList.add("active");
+      renderCards(event.target.getAttribute("data-timeframe"));
+    });
+  });
+}
+
+loadData();
